@@ -6,8 +6,8 @@
 
 .select {
   list-style-type: none;
-  display: inline-block;
-  max-width: 30%;
+  display: block;
+  max-width: 35%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -17,6 +17,7 @@
   padding: 0.5rem;
   cursor: pointer;
   text-align: center;
+  border-radius: 3px;
 }
 
 .option:nth-child(even) {
@@ -28,6 +29,7 @@
 }
 
 .option:first-child {
+  border-radius: 3px;
   font-weight: bold;
   background-color: #AAAAAA;
   color: #fff;

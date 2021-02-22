@@ -7,7 +7,7 @@ function Select () {
   const [open, setOpen] = useState(false)
 
   const optionRef = useRef()
-  const [textContent, setTextContent] = useState("Yaxshi ko'rgan sahobangiz")
+  const [textContent, setTextContent] = useState("Yaxshi ko'rgan sahobangizni tanlang!")
   useEffect(() => {
     var element = document.querySelectorAll(".option")
 
