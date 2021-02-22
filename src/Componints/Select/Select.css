@@ -1,0 +1,18 @@
+.select {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.option {
+  border: 1px solid #123;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.close {
+  display: none;
+}
+
+.open {
+  display: block;
+}
