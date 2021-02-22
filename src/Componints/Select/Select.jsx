@@ -7,41 +7,82 @@ function Select () {
   const [open, setOpen] = useState(false)
 
   const optionRef = useRef()
-
+  const [textContent, setTextContent] = useState("Yaxshi ko'rgan sahobangiz")
   useEffect(() => {
+    var element = document.querySelectorAll(".option")
 
     if(open) {
-      var element = document.querySelectorAll(".close")
+
       element.forEach(e => {
         e.classList.add("open")
       })
     }
     else {
-      console.log(open);
+
+      element.forEach(e => {
+        e.classList.remove("open")
+      })
     }
-  }, [open])
+  }, [open, textContent])
 
   return (
     <>
-      <ul className="select">
-        <li onClick={e => setOpen(!open)} className="option ">Ko'ksulton</li>
-        <li className="option close">Olcha</li>
-        <li ref={optionRef} className="option close">Xurmo</li>
-        <li className="option close">Shaftoli</li>
-        <li className="option close">Olma</li>
-        <li className="option close">Behi</li>
-        <li className="option close">Uzum</li>
-      </ul>
+      <div className="container">
+        <ul className="select">
+          <li onClick={e => setOpen(!open)} className="option open">{textContent}</li>
 
-      <br/>
-      <br/>
+          <li onClick={e => {
+            setOpen(!open)
+            setTextContent(e.target.textContent)
+          }} className="option close">Abu Bakr as-Siddik r.a</li>
 
-      <select name="" id="">
-        <option value="">Ali</option>
-        <option value="">Abdurahmon</option>
-        <option value="">Abdulloh</option>
-        <option value="">Xamza</option>
-      </select>
+          <li onClick={e => {
+            setOpen(!open)
+            setTextContent(e.target.textContent)
+          }} className="option close">Umar ibn al-Hattob r.a
+          </li>
+
+          <li onClick={e => {
+            setOpen(!open)
+            setTextContent(e.target.textContent)
+          }} className="option close">Usmon ibn Affon r.a</li>
+
+          <li onClick={e => {
+            setOpen(!open)
+            setTextContent(e.target.textContent)
+          }} className="option close">Ali ibn Abu Tolib r.a</li>
+
+          <li onClick={e => {
+            setOpen(!open)
+            setTextContent(e.target.textContent)
+          }} className="option close">Talha ibn Ubaydulloh</li>
+
+          <li onClick={e => {
+            setOpen(!open)
+            setTextContent(e.target.textContent)
+          }} className="option close">Said ibn Zayd r.a</li>
+
+          <li onClick={e => {
+            setOpen(!open)
+            setTextContent(e.target.textContent)
+          }} className="option close">Zubayr ibn Avvom r.a</li>
+
+          <li onClick={e => {
+            setOpen(!open)
+            setTextContent(e.target.textContent)
+          }} className="option close">Sa'd ibn Abu Vakkos r.a</li>
+
+          <li onClick={e => {
+            setOpen(!open)
+            setTextContent(e.target.textContent)
+          }} className="option close">Abdurahmon ibn Avf  r.a</li>
+
+          <li onClick={e => {
+            setOpen(!open)
+            setTextContent(e.target.textContent)
+          }} className="option close">Abu Ubayda ibn al-Jarroh r.a</li>
+        </ul>
+      </div>
     </>
   )
 }

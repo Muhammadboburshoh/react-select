@@ -1,13 +1,38 @@
+.container {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .select {
   list-style-type: none;
   display: inline-block;
+  max-width: 30%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .option {
   border: 1px solid #123;
   padding: 0.5rem;
   cursor: pointer;
+  text-align: center;
 }
+
+.option:nth-child(even) {
+  background-color: #CCF2F4;
+}
+
+.option:nth-child(odd) {
+  background-color: #A4EBF3;
+}
+
+.option:first-child {
+  font-weight: bold;
+  background-color: #AAAAAA;
+  color: #fff;
+}
+
 
 .close {
   display: none;
