@@ -7,7 +7,7 @@
 .select {
   list-style-type: none;
   display: block;
-  max-width: 35%;
+  max-width: 40%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -18,6 +18,7 @@
   cursor: pointer;
   text-align: center;
   border-radius: 3px;
+  font-size: 19px;
 }
 
 .option:nth-child(even) {
