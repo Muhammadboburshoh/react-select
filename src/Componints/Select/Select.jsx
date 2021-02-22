@@ -11,9 +11,10 @@ function Select () {
   useEffect(() => {
 
     if(open) {
-      var element = document.querySelectorAll(".option")
-      console.log(element.classList.add("close"));
-
+      var element = document.querySelectorAll(".close")
+      element.forEach(e => {
+        e.classList.add("open")
+      })
     }
     else {
       console.log(open);
